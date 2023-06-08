@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Book Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+    <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Book Store</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index", "About")">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index", "Store")">Stores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index", "Customer")">Customers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index", "Book")">Books</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index", "Sale")">Sales</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        @RenderBody()
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <p class="mb-4"><img src="images/logo_footer.png" alt="Image" class="img-fluid"></p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae nemo minima qui dolor, iusto iure.</p>
+                    <p><a href="#">Learn More</a></p>
+                </div>
+                <div class="col-lg-3">
+                    <h3 class="footer-heading"><span>Solutions</span></h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Investment Bonds</a></li>
+                        <li><a href="#">Financial Funds</a></li>
+                        <li><a href="#">Growth Business</a></li>
+                        <li><a href="#">Lifetime Support</a></li>
+                        <li><a href="#">Advanced Accounting</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h3 class="footer-heading"><span>Services</span></h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Investment Bonds</a></li>
+                        <li><a href="#">Financial Funds</a></li>
+                        <li><a href="#">Growth Business</a></li>
+                        <li><a href="#">Lifetime Support</a></li>
+                        <li><a href="#">Advanced Accounting</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h3 class="footer-heading"><span>Contact</span></h3>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Support Community</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Share Your Story</a></li>
+                        <li><a href="#">Our Supporters</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="copyright">
+                        <p>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
