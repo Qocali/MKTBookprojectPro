@@ -13,13 +13,15 @@ namespace Lookproject.Controllers
         private readonly AppDbContext _dbContext;
        public StoreController(AppDbContext dbContext)
         {
-            var _dbContext = new AppDbContext();
+             _dbContext = dbContext;
         }
 
         // GET: Book
         public ActionResult Index()
         {
+
             var Stores = _dbContext.Stores.ToList();
+            if(Stores==null || Stores.Count == 0)   HttpNotFound();
             return View(Stores);
         }
 

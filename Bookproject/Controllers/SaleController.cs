@@ -12,9 +12,9 @@ namespace Lookproject.Controllers
     public class SaleController : Controller
     {
         private readonly AppDbContext _db;
-        public SaleController()
+        public SaleController(AppDbContext db)
         {
-            _db = new AppDbContext();
+            _db =db;
         }
 
         // GET: Sale

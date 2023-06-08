@@ -9,9 +9,9 @@ namespace Lookproject.Controllers
     public class BookController : Controller
     {
         private readonly AppDbContext db;
-        public BookController()
+        public BookController(AppDbContext db)
         {
-            var db =new AppDbContext();
+            this.db=db;
         }
 
         // GET: Book
