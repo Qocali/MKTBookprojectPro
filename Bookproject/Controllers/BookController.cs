@@ -1,5 +1,6 @@
 ﻿using LookProject.DAL;
 using LookProject.Models;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Mvc;
@@ -61,7 +62,7 @@ namespace Lookproject.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Books.Add(book);
+                db.Entry(book).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

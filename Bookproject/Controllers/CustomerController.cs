@@ -3,6 +3,8 @@ using LookProject.Models;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 using System.Linq;
+using System.Data.Entity;
+
 namespace Lookproject.Controllers
 {
     public class CustomerController : Controller
@@ -20,13 +22,13 @@ namespace Lookproject.Controllers
             return View(books);
         }
 
-        // GET: Book/Create
+     
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Book/Create
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Customer customer)
@@ -41,7 +43,7 @@ namespace Lookproject.Controllers
             return View(customer);
         }
 
-        // GET: Book/Edit/5
+        // GET: Customer/Edit/5
         public ActionResult Edit(int id)
         {
             var customer = db.Customers.Find(id);
@@ -53,14 +55,14 @@ namespace Lookproject.Controllers
             return View(customer);
         }
 
-        // POST: Book/Edit/5
+        // POST: Customer/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Customer customer)
         {
             if (ModelState.IsValid)
             {
-                db.Customers.Add(customer);
+                db.Entry(customer).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }

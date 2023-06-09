@@ -1,6 +1,7 @@
 ﻿using LookProject.DAL;
 using LookProject.Models;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
@@ -70,7 +71,7 @@ namespace Lookproject.Controllers
         {
             if (ModelState.IsValid)
             {
-                _dbContext.Stores.Add(store);
+                _dbContext.Entry(store).State = EntityState.Modified;
                 _dbContext.SaveChanges();
                 return RedirectToAction("Index");
             }

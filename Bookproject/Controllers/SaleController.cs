@@ -1,6 +1,7 @@
 ﻿using LookProject.DAL;
 using LookProject.Models;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -84,11 +85,11 @@ namespace Lookproject.Controllers
         {
             if (ModelState.IsValid)
             {
-                _db.Sales.Add(sale);
+                _db.Entry(sale).State = EntityState.Modified;
                 _db.SaveChanges();
                 return RedirectToAction("Index");
             }
-           
+
             return View(sale);
         }
             public ActionResult Delete(int? id)
